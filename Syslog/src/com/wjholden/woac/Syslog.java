@@ -16,9 +16,8 @@ public class Syslog {
             DatagramPacket packet = new DatagramPacket(buf, buf.length);
             while (true) {
                 socket.receive(packet);
-                System.out.println(new String(buf, 0, packet.getLength()));
+                System.out.print(new String(buf, 5, packet.getLength() - 5));
             }
         }
-    }
-    
+    }   
 }
